@@ -1,10 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import Score from "./Score";
 
-const Header = () => {
+const Header = ({ currentScore, highScore }) => {
   return (
     <HeaderWrapper>
-      <h1>NBA Memory Card</h1>
+      <HeaderTitle>NBA Memory Card</HeaderTitle>
+      <ScoresWrapper>
+        <Score title={"Current Score"} score={currentScore} />
+        <Score title={"High Score"} score={highScore} />
+      </ScoresWrapper>
     </HeaderWrapper>
   );
 };
@@ -13,7 +18,21 @@ const HeaderWrapper = styled.div`
   background: ${props => props.theme.red};
   color: ${props => props.theme.white};
   display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const HeaderTitle = styled.h1`
+  font-size: 3.5em;
+  padding: 0.1em;
+  padding-top: 0.2em;
+`;
+
+const ScoresWrapper = styled.div`
+  width: 100%;
+  display: flex;
   justify-content: center;
+  gap: 2em;
 `;
 
 export default Header;

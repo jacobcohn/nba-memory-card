@@ -12,9 +12,8 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
   }
 
-  h1 {
-    font-size: 2.5em;
-    line-height: 2;
+  h1, h2, h3, h4, h5, h6, p {
+    line-height: 1.2;
   }
 `;
 
