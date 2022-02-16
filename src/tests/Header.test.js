@@ -10,7 +10,7 @@ test('renders correct text', () => {
   expect(screen.getByText(/nba memory card/i)).toBeInTheDocument();
 });
 
-test('renders Score components with correct props', () => {
+test('renders correct number of Score components', () => {
   render(<Header />);
   expect(screen.getAllByTestId(/score/).length).toBe(2);
 });
