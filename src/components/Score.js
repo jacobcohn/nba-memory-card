@@ -4,15 +4,13 @@ import styled from "styled-components";
 const Score = ({ title = "Score", score = 0 }) => {
   return (
     <ScoreWrapper>
-      <h3>{title}</h3>
-      <h3>:</h3>
-      <Number>{score}</Number>
+      <ScoreText>{title}: {score}</ScoreText>
     </ScoreWrapper>
   );
 };
 
 const ScoreWrapper = styled.div`
-  font-size: 1.3em;
+  font-size: 1.6em;
   background: ${(props) => props.theme.blue};
   padding: 0.3em;
   margin: 0.6em;
@@ -21,8 +19,8 @@ const ScoreWrapper = styled.div`
   display: flex;
 `;
 
-const Number = styled.h3`
-  padding-left: 0.4em;
+const ScoreText = styled.h1`
+  font-size: inherit;
 `;
 
 export default Score
