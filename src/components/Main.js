@@ -1,27 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 import Card from './Card';
+import nbaImages from './utils/nbaImages';
 
 const Main = () => {
-  const getCards = () => {
-    const cards = [];
-
-    for (let i = 0; i < 16; i += 1) {
-      cards.push(<Card key={i} />);
-    }
-
-    return cards;
-  };
-
   return (
     <MainWrapper>
-      {getCards()}
+      {nbaImages.map((team, index) => <Card key={index} src={team.src} name={team.name} />)}
     </MainWrapper>
   );
 };
 
 const MainWrapper = styled.div`
   flex: 1;
+  background: ${(props) => props.theme.gray};
   padding: 1em;
   display: grid;
   gap: 1em;
