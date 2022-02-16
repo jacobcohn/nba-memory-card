@@ -3,11 +3,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Header from '../components/Header';
 
-const mockScoreFn = jest.fn();
-jest.mock('../components/Score', () => () => {
-  mockScoreFn();
-  return <div />;
-});
+jest.mock('../components/Score', () => () => <div data-testid="score" />)
 
 test('renders correct text', () => {
   render(<Header />);
@@ -16,5 +12,5 @@ test('renders correct text', () => {
 
 test('renders Score components with correct props', () => {
   render(<Header />);
-  expect(mockScoreFn.mock.calls.length).toBe(2);
+  expect(screen.getAllByTestId(/score/).length).toBe(2);
 });
