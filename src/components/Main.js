@@ -2,11 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import Card from './Card';
 import nbaImages from './utils/nbaImages';
+import shuffle from './utils/shuffle';
 
 const Main = () => {
   return (
     <MainWrapper>
-      {nbaImages.map((team, index) => <Card key={index} src={team.src} name={team.name} />)}
+      {shuffle(nbaImages).map((team, index) => <Card key={index} src={team.src} name={team.name} />)}
     </MainWrapper>
   );
 };
