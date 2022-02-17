@@ -14,66 +14,79 @@ import philadelphia76ersLogo from '../../assets/philadelphia-76ers-logo@logotyp.
 import torontoRaptorsLogo from '../../assets/toronto-raptors-logo@logotyp.us.svg';
 import washingtonWizardsLogo from '../../assets/washington-wizards-logo@logotyp.us.svg';
 
-
-
 const nbaImages = [
   {
+    id: "0", 
     name: "Atlanta Hawks", 
     src: atlantaHawksLogo, 
   }, 
   {
+    id: "1", 
     name: "Boston Celtics", 
     src: bostonCelticsLogo, 
   }, 
   {
+    id: "2", 
     name: "Brooklyn Nets", 
     src: brooklynNetsLogo, 
   }, 
   {
+    id: "3", 
     name: "Charlotte Hornets", 
     src: charlotteHornetsLogo, 
   }, 
   {
+    id: "4", 
     name: "Chicago Bulls", 
     src: chicagoBullsLogo, 
   }, 
   {
+    id: "5", 
     name: "Cleveland Cavaliers", 
     src: clevelandCavaliersLogo, 
   }, 
   {
+    id: "6", 
     name: "Detroit Pistons", 
     src: detroitPistonsLogo, 
   }, 
   {
+    id: "7", 
     name: "Indiana Pacers", 
     src: indianaPacersLogo, 
   }, 
   {
+    id: "8", 
     name: "Miami Heat", 
     src: miamiHeatLogo, 
   }, 
   {
+    id: "9", 
     name: "Milwaukee Bucks", 
     src: milwaukeeBucksLogo, 
   }, 
   {
+    id: "10", 
     name: "New York Knicks", 
     src: newYorkKnicksLogo, 
   }, 
   {
+    id: "11", 
     name: "Orlando Magic", 
     src: orlandoMagicLogo, 
   }, 
   {
+    id: "12", 
     name: "Philadelphia 76ers", 
     src: philadelphia76ersLogo, 
   }, 
   {
+    id: "13", 
     name: "Toronto Raptors", 
     src: torontoRaptorsLogo, 
   }, 
   {
+    id: "14", 
     name: "Washington Wizards", 
     src: washingtonWizardsLogo, 
   }, 

@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Card from './Card';
 import nbaImages from './utils/nbaImages';
 import shuffle from './utils/shuffle';
 
 const Main = () => {
+  const [currentNBAImages, setCurrentNBAImages] = useState(nbaImages);
+  
+  useEffect(() => {
+    setCurrentNBAImages(shuffle(nbaImages));
+  }, []);
+  
+  const handleClick = () => {
+    setCurrentNBAImages(shuffle(nbaImages));
+  };
+
   return (
     <MainWrapper>
-      {shuffle(nbaImages).map((team, index) => <Card key={index} src={team.src} name={team.name} />)}
+      {currentNBAImages.map((team) => <Card key={team.id} src={team.src} name={team.name} onClick={handleClick}/>)}
     </MainWrapper>
   );
 };

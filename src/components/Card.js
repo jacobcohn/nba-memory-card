@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const Card = ({ src, name }) => {
+const Card = ({ src, name, onClick }) => {
   return (
-    <CardWrapper>
+    <CardWrapper onClick={onClick}>
       <img src={src} alt={`${name} Logo`} />
     </CardWrapper>
   );
