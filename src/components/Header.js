@@ -15,6 +15,9 @@ const Header = ({ currentScore, highScore }) => {
 };
 
 const HeaderWrapper = styled.div`
+  position: sticky;
+  top: 0;
+  
   background: ${props => props.theme.red};
   color: ${props => props.theme.white};
   display: flex;

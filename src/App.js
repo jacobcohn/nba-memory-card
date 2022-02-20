@@ -19,7 +19,7 @@ const App = () => {
 };
 
 const AppWrapper = styled.div`
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
 `;
