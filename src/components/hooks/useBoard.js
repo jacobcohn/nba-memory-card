@@ -8,7 +8,7 @@ const getEmptyBoard = (length) => {
   return obj;
 };
 
-const useMoveChecker = (length) => {
+const useBoard = (length) => {
   const [board, setBoard] = useState(getEmptyBoard(length));
 
   const getIndex = (index) => board[index];
@@ -20,13 +20,13 @@ const useMoveChecker = (length) => {
     }));
   };
 
-  const resetBoard = () => {
+  const reset = () => {
     for (const key in board) {
       board[key] = false;
     }
   };
 
-  return { getIndex, updateIndex, resetBoard };
+  return { getIndex, updateIndex, reset };
 };
 
-export default useMoveChecker;
+export default useBoard;

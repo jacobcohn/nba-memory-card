@@ -1,8 +1,8 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import useMoveChecker from '../components/hooks/useMoveChecker';
+import useBoard from '../components/hooks/useBoard';
 
 test('returns correct board initially', () => {
-  const { result } = renderHook(() => useMoveChecker(4));
+  const { result } = renderHook(() => useBoard(4));
 
   expect(result.current.getIndex(0)).toBe(false);
   expect(result.current.getIndex(1)).toBe(false);
@@ -11,7 +11,7 @@ test('returns correct board initially', () => {
 });
 
 test('updateBoard changes that specific index to true', () => {
-  const { result } = renderHook(() => useMoveChecker(4));
+  const { result } = renderHook(() => useBoard(4));
 
   act(() => result.current.updateIndex(2));
 
@@ -22,10 +22,10 @@ test('updateBoard changes that specific index to true', () => {
 });
 
 test('updateBoard chang index to true', () => {
-  const { result } = renderHook(() => useMoveChecker(4));
+  const { result } = renderHook(() => useBoard(4));
 
   act(() => result.current.updateIndex(2));
-  act(() => result.current.resetBoard());
+  act(() => result.current.reset());
 
   expect(result.current.getIndex(0)).toBe(false);
   expect(result.current.getIndex(1)).toBe(false);
