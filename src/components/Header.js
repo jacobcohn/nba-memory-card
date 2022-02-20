@@ -20,6 +20,18 @@ const HeaderWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 500px) {
+    font-size: 0.85em;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 0.7em;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 0.65em;
+  }
 `;
 
 const HeaderTitle = styled.h1`

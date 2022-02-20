@@ -10,6 +10,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: Optima, Arial, sans-serif;
     font-size: 1rem;
     height: 100%;
+
+    @media (min-width: 2000px) {
+      font-size: 1.1rem;
+    }
   }
 
   h1, h2, h3, h4, h5, h6, p {

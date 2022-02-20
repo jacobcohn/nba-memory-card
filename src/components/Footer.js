@@ -22,6 +22,10 @@ const FooterWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 0.5em;
+
+  @media (max-width: 500px) {
+    font-size: 1.3em;
+  }
 `;
 
 const FooterTitle = styled.h1`
