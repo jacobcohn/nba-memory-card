@@ -4,8 +4,9 @@ import '@testing-library/jest-dom';
 import App from '../App';
 
 jest.mock('../components/Header', () => () => <div data-testid="header" />);
-jest.mock('../components/Main', () => () => <div data-testid="main" />)
-jest.mock('../components/Footer', () => () => <div data-testid="footer" />)
+jest.mock('../components/Main', () => () => <div data-testid="main" />);
+jest.mock('../components/Footer', () => () => <div data-testid="footer" />);
+jest.mock('../components/utils/nbaImages', () => [1, 2, 3]);
 
 test('renders Header component', () => {
   render(<App />);

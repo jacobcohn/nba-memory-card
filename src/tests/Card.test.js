@@ -11,8 +11,9 @@ test('renders correct image', () => {
 
 test('when clicked, Card runs onClick function', () => {
   const mockOnClickFn = jest.fn();
-  render(<Card src={"testSrc"} name={"testName"} onClick={mockOnClickFn} />);
+  render(<Card id={"testId"} src={"testSrc"} name={"testName"} onClick={mockOnClickFn} />);
   expect(mockOnClickFn.mock.calls.length).toBe(0);
   userEvent.click(screen.getByAltText(/testname logo/i));
   expect(mockOnClickFn.mock.calls.length).toBe(1);
+  expect(mockOnClickFn.mock.calls[0][0]).toBe("testId");
 });

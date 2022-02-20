@@ -3,21 +3,23 @@ import styled from 'styled-components';
 import Card from './Card';
 import nbaImages from './utils/nbaImages';
 import shuffle from './utils/shuffle';
+import { v4 as uuidv4 } from 'uuid';
 
-const Main = () => {
+const Main = ({ onClick }) => {
   const [currentNBAImages, setCurrentNBAImages] = useState(nbaImages);
   
   useEffect(() => {
     setCurrentNBAImages(shuffle(nbaImages));
   }, []);
   
-  const handleClick = () => {
+  const handleClick = (id) => {
     setCurrentNBAImages(shuffle(nbaImages));
+    onClick(id);
   };
 
   return (
     <MainWrapper>
-      {currentNBAImages.map((team) => <Card key={team.id} src={team.src} name={team.name} onClick={handleClick}/>)}
+      {currentNBAImages.map((team) => <Card key={uuidv4()} id={team.id} src={team.src} name={team.name} onClick={handleClick}/>)}
     </MainWrapper>
   );
 };
