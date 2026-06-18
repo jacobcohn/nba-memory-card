@@ -3,7 +3,7 @@
 ![NBA Memory Card Preview](./preview.png)
 
 ## Where To Play
-> **Live Preview:** https://jacobcohn.github.io/memory-card/
+> **Live Preview:** https://jacobcohn.github.io/nba-memory-card/
 
 You can play on a computer, tablet, or phone. Just open a browser and go to the link above.
 
